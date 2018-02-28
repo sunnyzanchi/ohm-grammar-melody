@@ -1,0 +1,22 @@
+Melody {
+  sequence (a sequence of notes)
+    = "("* chord+ ")"*
+    
+  chord (multiple notes together)
+    = note+ space*  
+    
+  note
+    = (modnote | notebase) digit* 
+      
+  modnote
+    = notebase (flat | sharp)
+   
+  notebase
+    ="a".."g"
+    
+  flat
+    = ","
+    
+  sharp
+    = "'"
+}

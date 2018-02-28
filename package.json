@@ -1,0 +1,16 @@
+{
+  "name": "ohm-grammar-melody",
+  "description": "An Ohm.js grammar for simple, terse music coding",
+  "author": "Zanchi <emzanchi@gmail.com> (https://github.com/zanchi)",
+  "scripts": {
+    "test": "ava ./test"
+  },
+  "dependencies": {
+    "ohm-js": "^0.14.0"
+  },
+  "devDependencies": {
+    "ava": "^0.25.0",
+    "eslint": "^4.18.1",
+    "eslint-config-gsandf": "^1.0.0"
+  }
+}
