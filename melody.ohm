@@ -1,9 +1,16 @@
 Melody {
-  sequence (a sequence of notes)
+  Expr
+    = BlockDeclaration
+    | Sequence
+  
+  BlockDeclaration
+    = identifier "{" Sequence "}"
+    
+  Sequence (a sequence of notes)
     = "("* chord+ ")"*
     
-  chord (multiple notes together)
-    = note+ space*  
+  chord
+    = note+
     
   note
     = (modnote | notebase) digit* 
@@ -12,11 +19,14 @@ Melody {
     = notebase (flat | sharp)
    
   notebase
-    ="a".."g"
+    = "a".."g"
     
   flat
     = ","
     
   sharp
     = "'"
+  
+  identifier
+    = letter+
 }
