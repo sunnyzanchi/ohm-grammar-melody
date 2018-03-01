@@ -5,12 +5,9 @@ test('Chords can be defined as a sequence of notes with no spaces', t => {
   t.true(valid('ced'));
 });
 
-test(
-  `A note in a chord can have an octave designation
-  (this makes all notes after it in the same/next octave)`,
-  t => {
-    t.true(valid('d2gb'));
-  });
+test('A note in a chord can have an octave designation', t => {
+  t.true(valid('d2gb'));
+});
 
 test(
   'Subsequent notes in a chord can have overriding octave designations',
