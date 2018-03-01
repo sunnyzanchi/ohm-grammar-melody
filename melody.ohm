@@ -1,32 +1,36 @@
 Melody {
   Expr
-    = BlockDeclaration
-    | Sequence
-  
+    = (Directive
+    | BlockDeclaration
+    | Sequence)*
+
   BlockDeclaration
-    = identifier "{" Sequence "}"
-    
+    = identifier "{" Directive* Sequence "}"
+
   Sequence (a sequence of notes)
     = "("* chord+ ")"*
-    
+
+  Directive
+    = "#" identifier "=" ( note | identifier | digit+ )
+
   chord
     = note+
-    
+
   note
-    = (modnote | notebase) digit* 
-      
+    = (modnote | notebase) digit*
+
   modnote
     = notebase (flat | sharp)
-   
+
   notebase
-    = "a".."g"
-    
+    ="a".."g"
+
   flat
     = ","
-    
+
   sharp
     = "'"
-  
+
   identifier
     = letter+
 }
