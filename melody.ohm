@@ -4,7 +4,7 @@ Melody {
     | BlockDeclaration
     | ConcurrentSequence
     | Sequence)*
-    
+
   ConcurrentSequence (a list of sequences)
     = "[" ListOf<Sequence, ";"> "]"
 
@@ -16,10 +16,10 @@ Melody {
 
   Directive
     = "#" letter+ "=" ( note | identifier | digit+ | String )
-    
+
   String
     = "\"" (~"\"" any)* "\""
-    
+
   identifier
     = "$" letter+
 
@@ -30,13 +30,16 @@ Melody {
     = (modnote | notebase) digit*
 
   modnote
-    = notebase (flat | sharp)
+    = notebase (flat | natural | sharp)
 
   notebase
     ="a".."g"
 
   flat
     = ","
+
+  natural
+    = "-"
 
   sharp
     = "'"

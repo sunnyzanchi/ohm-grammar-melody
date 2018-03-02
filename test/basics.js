@@ -18,3 +18,7 @@ test('A note can be flat', t => {
 test('A note can be sharp', t => {
   t.true(valid('f\''));
 });
+
+test('A note can be natural', t => {
+  t.true(valid('c-'));
+});
