@@ -1,7 +1,11 @@
 {
   "name": "ohm-grammar-melody",
+  "version": "0.1.0",
   "description": "An Ohm.js grammar for simple, terse music coding",
+  "main": "./index.js",
+  "repository": "https://github.com/zanchi/ohm-grammar-melody",
   "author": "Zanchi <emzanchi@gmail.com> (https://github.com/zanchi)",
+  "license": "MIT",
   "scripts": {
     "test": "ava ./test"
   },
