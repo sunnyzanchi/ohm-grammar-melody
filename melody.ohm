@@ -2,16 +2,26 @@ Melody {
   Expr
     = (Directive
     | BlockDeclaration
+    | ConcurrentSequence
     | Sequence)*
+    
+  ConcurrentSequence (a list of sequences)
+    = "[" ListOf<Sequence, ";"> "]"
 
   BlockDeclaration
     = identifier "{" Directive* Sequence "}"
 
   Sequence (a sequence of notes)
-    = "("* chord+ ")"*
+    = "("* (identifier | chord)+ ")"*
 
   Directive
-    = "#" identifier "=" ( note | identifier | digit+ )
+    = "#" letter+ "=" ( note | identifier | digit+ | String )
+    
+  String
+    = "\"" (~"\"" any)* "\""
+    
+  identifier
+    = "$" letter+
 
   chord
     = note+
@@ -30,7 +40,4 @@ Melody {
 
   sharp
     = "'"
-
-  identifier
-    = letter+
 }

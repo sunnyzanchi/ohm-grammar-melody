@@ -8,7 +8,7 @@ test('Directives can be given', t => {
 test('Multiple directives can be given', t => {
   t.true(valid(`
     # key = a'
-    # some = thing
+    # something = "another thing"
     # bpm = 140
   `));
 });
@@ -16,7 +16,7 @@ test('Multiple directives can be given', t => {
 // Directives are block-scoped
 test('Directives can be given inside of blocks', t => {
   t.true(valid(`
-    bridge {
+    $bridge {
       # key = d,
 
       d e g e
