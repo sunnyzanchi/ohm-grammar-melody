@@ -1,4 +1,5 @@
 import inlinejs from 'rollup-plugin-inline-js';
+import babel from 'rollup-plugin-babel';
 
 export default {
   external: ['ohm-js'],
@@ -7,5 +8,10 @@ export default {
     file: 'dist/index.js',
     format: 'cjs',
   },
-  plugins: [inlinejs()],
+  plugins: [
+    inlinejs(),
+    babel({
+      exclude: 'node_modules/**',
+    }),
+  ],
 };
