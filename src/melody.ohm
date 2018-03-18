@@ -9,7 +9,7 @@ Melody {
     = "[" ListOf<Sequence, ";"> "]"
 
   BlockDeclaration
-    = identifier "{" Directive* Sequence "}"
+    = identifier "{" Directive* BlockDeclaration* Sequence "}"
 
   Sequence (a sequence of notes)
     = "("* (identifier | chord)+ ")"*
