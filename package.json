@@ -9,7 +9,7 @@
   "scripts": {
     "build": "rollup -c",
     "prepublish": "yarn run build",
-    "test": "ava ./test"
+    "test": "yarn run build && ava ./test"
   },
   "dependencies": {
     "ohm-js": "^0.14.0"
