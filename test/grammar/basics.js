@@ -1,5 +1,5 @@
 const { test } = require('ava');
-const { valid } = require('./_helpers');
+const { valid } = require('../_helpers');
 
 test('Essentially the simplest possible melody program - a single note', t => {
   t.true(valid('c'));

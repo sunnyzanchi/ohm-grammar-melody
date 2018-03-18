@@ -1,5 +1,5 @@
 const { test } = require('ava');
-const { valid } = require('./_helpers');
+const { valid } = require('../_helpers');
 
 test('Directives can be given', t => {
   t.true(valid('# key = e'));

@@ -1,5 +1,5 @@
 const { test } = require('ava');
-const { valid } = require('./_helpers');
+const { valid } = require('../_helpers');
 
 test('Concurrent sequences can be expressed', t => {
   t.true(valid('[c; e; g]'));

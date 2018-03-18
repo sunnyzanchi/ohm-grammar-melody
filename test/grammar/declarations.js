@@ -1,5 +1,5 @@
 const { test } = require('ava');
-const { valid } = require('./_helpers');
+const { valid } = require('../_helpers');
 
 test('Block declarations can be made', t => {
   t.true(valid(`$chorus {

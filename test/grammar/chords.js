@@ -1,5 +1,5 @@
 const { test } = require('ava');
-const { valid } = require('./_helpers');
+const { valid } = require('../_helpers');
 
 test('Chords can be defined as a combination of notes with no spaces', t => {
   t.true(valid('ced'));
