@@ -12,7 +12,10 @@ Melody {
     = identifier "{" Directive* BlockDeclaration* Sequence "}"
 
   Sequence (a sequence of notes)
-    = "("* (identifier | chord)+ ")"*
+    = (Group | identifier | chord)+
+    
+  Group
+    = "(" (identifier | chord)+ ")"
 
   Directive
     = "#" letter+ "=" ( note | identifier | digit+ | String )

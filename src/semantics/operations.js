@@ -63,7 +63,7 @@ export default {
         octave: octave.length > 0 && Number(octave.join('')),
       };
     },
-    Sequence(lParen, ident, rParen) {
+    Sequence(ident) {
       return ident.eval();
     },
   },
