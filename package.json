@@ -8,6 +8,7 @@
   "license": "MIT",
   "scripts": {
     "build": "rollup -c",
+    "lint": "yarn run eslint src/ test/",
     "prepublish": "yarn run build",
     "test": "yarn run build && ava ./test"
   },
